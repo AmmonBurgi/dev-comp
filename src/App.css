@@ -1,3 +1,62 @@
 .App {
   text-align: center;
+  height: 200vh;
+}
+.box-model {
+  width: 100px;
+  height: 200px;
+  margin: 10px;
+  border: solid 5px black;
+  padding: 10px;
+  float: right;
+  background-color: rgb(160, 160, 160); 
+  /* ^^ example of font/background for css */
+}
+.box-rel {
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+  border: solid 5px black;
+  padding: 10px;
+  float: right;
+  background-color: rgb(160, 160, 160); 
+  position: relative;
+  /* top: 20px; */
+  /* ^^ example of font/background for css */
+}
+.box-fix {
+  width: 100px;
+  height: 200px;
+  margin: 10px;
+  border: solid 5px black;
+  padding: 10px;
+  float: right;
+  position: fixed;
+  top: 10px;
+  background-color: rgb(160, 160, 160); 
+  /* ^^ example of font/background for css */
+}
+.box-absolute {
+  width: 100px;
+  height: 200px;
+  margin: 10px;
+  border: solid 5px black;
+  padding: 10px;
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgb(160, 160, 160); 
+  /* ^^ example of font/background for css */
+}
+.box-sticky {
+  width: 100px;
+  height: 200px;
+  margin: 10px;
+  border: solid 5px black;
+  padding: 10px;
+  float: right;
+  position: sticky;
+  top: 20px;
+  background-color: rgb(160, 160, 160); 
+  /* ^^ example of font/background for css */
 }
