@@ -2,11 +2,13 @@
   text-align: center;
   height: 200vh;
 }
-.box-model {
+div {
+  border: solid 5px black;
+}
+#box-model {
   width: 100px;
   height: 200px;
   margin: 10px;
-  border: solid 5px black;
   padding: 10px;
   float: right;
   background-color: rgb(160, 160, 160); 
@@ -16,7 +18,6 @@
   width: 500px;
   height: 300px;
   margin: 10px;
-  border: solid 5px black;
   padding: 10px;
   float: right;
   background-color: rgb(160, 160, 160); 
@@ -28,7 +29,6 @@
   width: 100px;
   height: 200px;
   margin: 10px;
-  border: solid 5px black;
   padding: 10px;
   float: right;
   position: fixed;
@@ -40,7 +40,6 @@
   width: 100px;
   height: 200px;
   margin: 10px;
-  border: solid 5px black;
   padding: 10px;
   float: right;
   position: absolute;
@@ -52,7 +51,6 @@
   width: 100px;
   height: 200px;
   margin: 10px;
-  border: solid 5px black;
   padding: 10px;
   float: right;
   position: sticky;
