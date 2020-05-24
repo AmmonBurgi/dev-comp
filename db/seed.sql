@@ -28,4 +28,21 @@ date varchar(20),
 author_id integer REFERENCES user(user_id)
 );
 
--- many to many pattern...
+-- many to many pattern...many rows in Topic table can relate to many rows in Deck table. Junction tables are a common approach to this pattern.
+
+create table topic (
+    topic_id serial primary key,
+    topic varchar(50)
+);
+
+create table deck (
+    deck_id serial primary key,
+    title varchar(50),
+    description varchar(750),
+    cover_photo text
+);
+
+create table deck_topics (
+    deck_id int references deck(deck_id),
+    topic_id int references topic(topic_id)
+);
