@@ -46,3 +46,9 @@ create table deck_topics (
     deck_id int references deck(deck_id),
     topic_id int references topic(topic_id)
 );
+
+-- Example of subqueries. This allows do add conditions from another table to determine what is recieved from the main table.
+
+select * from deck
+where deck_id in (select deck_id from deck_topics
+where topic_id = $1)

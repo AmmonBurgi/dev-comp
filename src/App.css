@@ -6,12 +6,17 @@ div {
   border: solid 5px black;
 }
 #box-model {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100px;
   height: 200px;
   margin: 10px;
   padding: 10px;
   float: right;
   background-color: rgb(160, 160, 160); 
+  box-shadow: 4px 4px 5px blue;
   /* ^^ example of font/background for css */
 }
 .box-rel {
@@ -20,10 +25,14 @@ div {
   margin: 10px;
   padding: 10px;
   float: right;
-  background-color: rgb(160, 160, 160); 
+  background: linear-gradient(red, yellow, blue); 
   position: relative;
+  transition: 1s;
   /* top: 20px; */
-  /* ^^ example of font/background for css */
+}
+.box-rel:hover {
+  background: green;
+
 }
 .box-fix {
   width: 100px;
@@ -57,4 +66,33 @@ div {
   top: 20px;
   background-color: rgb(160, 160, 160); 
   /* ^^ example of font/background for css */
+}
+.logo{
+  border: solid 2px black;
+  width: 60px;
+  height: 20px;
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: 5s;
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  z-index: 100;
+
+}
+@keyframes spin{
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@media(max-width: 769px){
+.logo {
+  width: 300px;
+  height: 90px;
+}
 }

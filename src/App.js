@@ -21,6 +21,7 @@ class App extends Component{
   render(){
   return (
     <div className="App">
+      <div className='logo'></div>
       <section>
         <h1>I'm in a section</h1>
         <p>Sections are used to group together related elements</p>
