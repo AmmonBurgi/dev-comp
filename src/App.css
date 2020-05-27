@@ -92,7 +92,18 @@ div {
 }
 .box-rel:hover {
   background: green;
+}
 
+.box-absolute p{
+font-size: 15px;
+}
+
+div > input{
+  font-size: 20px;
+}
+
+.focuss + span{
+color: goldenrod;
 }
 
 input:disabled {

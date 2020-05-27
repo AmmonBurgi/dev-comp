@@ -15,8 +15,13 @@ class App extends Component{
   }
 componentDidMount(){
   this.hello()
+  this.getIcon()
   const q = 'I am a query'
   axios.get(`/api/query-test/?theQuery=${q}`)
+}
+getIcon = () => {
+axios.get('/api/logo192.png')
+.then(res => console.log(res))
 }
  hello(){
   console.log('Hello There')
@@ -38,7 +43,10 @@ componentDidMount(){
       <script type='module' src='JS file'>I point to javascript</script>
       <div id='box-model'>I am a Box Model</div>
       <div className='box-rel'>Relative
-      <div className='box-absolute'><p className='text-effects'>asdfasdfasdfasf</p></div>
+      <div className='box-absolute'>
+        <p className='text-effects'>asdfasdfasdfasf</p>
+        <p>space selector</p>
+      </div>
       </div>
       <div className='box-fix'>fixed</div>
       <div className='box-sticky'>sticky</div>
