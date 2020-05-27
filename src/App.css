@@ -10,6 +10,7 @@ div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  box-sizing: border-box;
   width: 100px;
   height: 200px;
   margin: 10px;
@@ -17,6 +18,8 @@ div {
   float: right;
   background-color: rgb(160, 160, 160); 
   box-shadow: 4px 4px 5px blue;
+  flex-wrap: nowrap;
+  background-image: url('https://pics.me.me/john-cena-face-png-2-%C2%BB-png-image-50314341.png');
   /* ^^ example of font/background for css */
 }
 .box-rel {
@@ -25,15 +28,15 @@ div {
   margin: 10px;
   padding: 10px;
   float: right;
-  background: linear-gradient(red, yellow, blue); 
+  background-image: linear-gradient(red, yellow, blue);
+  font-weight: bold;
+  color: blue;
+  font-size: 20px; 
   position: relative;
   transition: 1s;
   /* top: 20px; */
 }
-.box-rel:hover {
-  background: green;
 
-}
 .box-fix {
   width: 100px;
   height: 200px;
@@ -43,6 +46,7 @@ div {
   position: fixed;
   top: 10px;
   background-color: rgb(160, 160, 160); 
+  /* text-affect */
   /* ^^ example of font/background for css */
 }
 .box-absolute {
@@ -65,7 +69,12 @@ div {
   position: sticky;
   top: 20px;
   background-color: rgb(160, 160, 160); 
+  overflow: nowrap;
+  text-overflow: ellipsis;
   /* ^^ example of font/background for css */
+}
+.text-effects{
+ writing-mode: vertical-lr;
 }
 .logo{
   border: solid 2px black;
@@ -80,8 +89,24 @@ div {
   left: 200px;
   top: 200px;
   z-index: 100;
+}
+.box-rel:hover {
+  background: green;
 
 }
+
+input:disabled {
+  background-color: burlywood;
+}
+
+p:nth-child(1) {
+  color: red;
+}
+
+.focuss:focus{
+  color: yellow;
+}
+
 @keyframes spin{
   from {
     transform: rotate(0deg);

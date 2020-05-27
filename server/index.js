@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express'),
       massive = require('massive'),
       {SERVER_PORT, CONNECTION_STRING} = process.env,
+      ctrl = require('./ctrl'),
       port = SERVER_PORT,
       app = express()
 
@@ -16,6 +17,8 @@ app.use(express.static('public'))
 // app.put(path, ctrl)
 // app.post(path, ctrl)
 // app.delete(path, ctrl)
+
+app.get('/api/query-test', ctrl.rLM, ctrl.display )
 
 massive({
     connectionString: CONNECTION_STRING,

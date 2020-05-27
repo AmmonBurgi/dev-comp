@@ -49,6 +49,6 @@ create table deck_topics (
 
 -- Example of subqueries. This allows do add conditions from another table to determine what is recieved from the main table.
 
-select * from deck
+select title from deck
 where deck_id in (select deck_id from deck_topics
 where topic_id = $1)
