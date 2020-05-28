@@ -95,11 +95,11 @@ div {
 }
 
 .box-absolute p{
-font-size: 15px;
+font-size: 10px;
 }
 
 div > input{
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .focuss + span{

@@ -9,7 +9,7 @@ const express = require('express'),
 app.use(express.json())
 
 // vv example of express static file middleware. This gives a path to the public folder that can be accessed in the front end.
-app.use(express.static('public'))
+app.use(express.static(__dirname + 'public'))
 
 // vv Request-level middleware is the middleware that's used with the request.
 // vv REST query examples
